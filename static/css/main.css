@@ -1,0 +1,14 @@
+.bg-img{
+	background: #353535 
+	url(https://argenta.colabr.io/wp-content/uploads/2016/11/arg_demo_slider7-min.jpg?id=3993);
+	background-position: center;
+    background-repeat: no-repeat !important;
+}
+
+.full-height{
+	height: 90vh;
+}
+
+.tra{
+	opacity: 0.9;
+}
