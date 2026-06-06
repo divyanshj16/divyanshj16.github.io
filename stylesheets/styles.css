@@ -306,6 +306,37 @@ h3 {
   text-transform: uppercase;
 }
 
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.education-card {
+  min-height: 210px;
+  padding: 24px;
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  box-shadow: 8px 8px 0 rgba(8, 127, 140, 0.22);
+}
+
+.education-card h3 {
+  margin-top: 46px;
+}
+
+.education-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.education-meta {
+  color: var(--rust);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .split-section {
   align-items: start;
 }
@@ -413,6 +444,7 @@ h3 {
   .hero,
   .section,
   .intro-grid,
+  .education-grid,
   .article-grid {
     grid-template-columns: 1fr;
   }
