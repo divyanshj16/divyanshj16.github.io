@@ -1,12 +1,13 @@
 :root {
-  --ink: #1e2428;
-  --muted: #697176;
-  --paper: #fbfaf7;
+  --ink: #171717;
+  --muted: #64615b;
+  --paper: #f8f8f4;
   --surface: #ffffff;
-  --line: #d9d4ca;
-  --line-strong: #9f978a;
-  --accent: #366b62;
-  --accent-soft: #edf4f1;
+  --line: #c9c5b9;
+  --line-strong: #171717;
+  --accent: #8f2f22;
+  --accent-soft: #fff2dc;
+  --rule: 2px solid var(--ink);
 }
 
 * {
@@ -28,7 +29,7 @@ body {
 a {
   color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: rgba(54, 107, 98, 0.32);
+  text-decoration-color: rgba(143, 47, 34, 0.32);
   text-underline-offset: 3px;
 }
 
@@ -44,17 +45,17 @@ img {
 }
 
 .site-shell {
-  width: min(980px, calc(100% - 40px));
+  width: min(1040px, calc(100% - 40px));
   margin: 0 auto;
 }
 
 .site-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 34px;
   align-items: end;
-  justify-content: space-between;
-  gap: 28px;
-  padding: 42px 0 22px;
-  border-bottom: 2px solid var(--ink);
+  padding: 34px 0 18px;
+  border-bottom: var(--rule);
 }
 
 .kicker,
@@ -78,9 +79,9 @@ figure {
 
 h1 {
   margin-bottom: 0;
-  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  font-size: clamp(3rem, 8vw, 6.6rem);
   font-weight: 500;
-  line-height: 0.92;
+  line-height: 0.86;
 }
 
 h2 {
@@ -97,10 +98,15 @@ p {
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 6px 16px;
+  justify-content: space-between;
+  gap: 0;
+  margin: 0 0 24px;
+  border-bottom: 1px solid var(--line-strong);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.86rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .nav-links a,
@@ -109,22 +115,32 @@ p {
   text-decoration: none;
 }
 
+.nav-links a {
+  flex: 1 1 auto;
+  padding: 9px 14px 8px;
+  border-right: 1px solid var(--line);
+  text-align: center;
+}
+
+.nav-links a:first-child {
+  border-left: 1px solid var(--line);
+}
+
 .nav-links a:hover,
 .nav-links a:focus-visible,
 .site-footer a:hover,
 .site-footer a:focus-visible {
   color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  background: var(--accent-soft);
 }
 
 .intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 190px;
-  gap: clamp(28px, 7vw, 78px);
+  grid-template-columns: minmax(0, 1fr) 172px;
+  gap: clamp(24px, 6vw, 60px);
   align-items: start;
-  padding: 46px 0 52px;
-  border-bottom: 1px solid var(--line);
+  padding: 30px 0 40px;
+  border-bottom: var(--rule);
 }
 
 .intro-copy {
@@ -133,15 +149,15 @@ p {
 
 .intro-copy p {
   max-width: 650px;
-  color: #3f464a;
+  color: #34322f;
   font-size: 1.04rem;
 }
 
 .portrait {
   margin-bottom: 0;
-  padding: 6px;
+  padding: 5px;
   background: var(--surface);
-  border: 1px solid var(--line-strong);
+  border: var(--rule);
 }
 
 .portrait img {
@@ -149,14 +165,14 @@ p {
   width: 100%;
   object-fit: cover;
   object-position: center top;
-  filter: saturate(0.82);
+  filter: grayscale(1) contrast(1.08);
 }
 
 .section {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr);
-  gap: clamp(24px, 5vw, 62px);
-  padding: 42px 0;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 48px);
+  padding: 34px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -168,8 +184,8 @@ p {
   width: 100%;
   border-collapse: collapse;
   background: var(--surface);
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  border-top: var(--rule);
+  border-bottom: var(--rule);
   font-size: 0.98rem;
 }
 
@@ -181,7 +197,7 @@ p {
 }
 
 .info-table thead th {
-  color: var(--accent);
+  color: var(--ink);
   background: var(--accent-soft);
   border-top: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -198,7 +214,7 @@ p {
 }
 
 .info-table tbody tr:hover {
-  background: #f7f6f1;
+  background: #fffaf1;
 }
 
 .info-table th[scope="row"] {
@@ -233,6 +249,37 @@ p {
   margin-left: 12px;
 }
 
+.masthead-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+}
+
+.masthead-table th,
+.masthead-table td {
+  padding: 7px 9px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.masthead-table tr:first-child th,
+.masthead-table tr:first-child td {
+  border-top: 0;
+}
+
+.masthead-table th {
+  width: 72px;
+  color: var(--accent);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -256,12 +303,17 @@ p {
   }
 
   .site-header {
-    display: grid;
+    gap: 18px;
     align-items: start;
   }
 
   .nav-links {
     justify-content: start;
+  }
+
+  .nav-links a {
+    flex: 1 1 33.333%;
+    border-bottom: 1px solid var(--line);
   }
 
   .intro {
