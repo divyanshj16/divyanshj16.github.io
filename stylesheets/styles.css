@@ -45,8 +45,9 @@ img {
 }
 
 .site-shell {
-  width: min(1040px, calc(100% - 40px));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0 clamp(18px, 4vw, 64px);
 }
 
 .site-header {
@@ -144,11 +145,11 @@ p {
 }
 
 .intro-copy {
-  max-width: 690px;
+  max-width: none;
 }
 
 .intro-copy p {
-  max-width: 650px;
+  max-width: 760px;
   color: #34322f;
   font-size: 1.04rem;
 }
@@ -293,7 +294,7 @@ p {
 
 @media (max-width: 760px) {
   .site-shell {
-    width: min(100% - 28px, 620px);
+    padding: 0 14px;
   }
 
   .site-header,
