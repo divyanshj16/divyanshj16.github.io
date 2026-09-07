@@ -7,17 +7,17 @@
     <title>Divyansh Jha</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <script src="https://kit.fontawesome.com/2e6acb5b0b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="site-shell">
-      <header class="site-header" aria-label="Main navigation">
-        <a class="brand" href="#top" aria-label="Divyansh Jha home">
-          <span class="brand-mark">DJ</span>
-          <span>Divyansh Jha</span>
-        </a>
+      <header class="site-header" id="top">
+        <div>
+          <p class="kicker">Research Engineer</p>
+          <h1>Divyansh Jha</h1>
+        </div>
 
         <nav class="nav-links" aria-label="Sections">
+          <a href="#about">About</a>
           <a href="#work">Work</a>
           <a href="#education">Education</a>
           <a href="#writing">Writing</a>
@@ -25,173 +25,185 @@
         </nav>
       </header>
 
-      <main id="top">
-        <section class="hero" aria-labelledby="intro-title">
-          <div class="hero-copy">
-            <p class="eyebrow">Research Engineer at NYU Langone Health</p>
-            <h1 id="intro-title">Applied machine learning for healthcare and computer vision.</h1>
-            <p class="hero-text">
+      <main>
+        <section class="intro" aria-labelledby="intro-title">
+          <div class="intro-copy">
+            <p class="section-label">Current</p>
+            <h2 id="intro-title">Applied machine learning for healthcare, computer vision, robotics, and geospatial systems.</h2>
+            <p>
               I am a research engineer based in New York. I currently work at NYU Langone Health and am pursuing an M.S. in Computer Science at Georgia Institute of Technology.
             </p>
-            <p class="hero-text">
+            <p>
               Before NYU Langone, I worked on machine learning at Woven by Toyota and deep learning for geospatial workflows at Esri.
             </p>
-
-            <div class="hero-actions" aria-label="Primary links">
-              <a class="button primary" href="mailto:divyanshj.16@gmail.com">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                Contact
-              </a>
-              <a class="button secondary" href="assets/divyansh-resume.pdf" target="_blank" rel="noreferrer">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                Resume
-              </a>
-            </div>
           </div>
 
-          <aside class="hero-aside" aria-label="Profile summary">
-            <div class="portrait-wrap">
-              <img src="assets/pp.jpg" alt="Portrait of Divyansh Jha">
-            </div>
-            <div class="social-strip" aria-label="Social profiles">
-              <a href="https://github.com/divyanshj16" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-              <a href="https://twitter.com/DIVYANSHJHA" target="_blank" rel="noreferrer" aria-label="Twitter">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/divyanshjha/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-              </a>
-            </div>
-          </aside>
+          <figure class="portrait">
+            <img src="assets/pp.jpg" alt="Portrait of Divyansh Jha">
+          </figure>
         </section>
 
-        <section class="section intro-section" aria-labelledby="about-title">
+        <section class="section" id="about" aria-labelledby="about-title">
           <div class="section-heading">
-            <p class="eyebrow">Focus</p>
-            <h2 id="about-title">Clear focus, practical systems.</h2>
+            <p class="section-label">01</p>
+            <h2 id="about-title">About</h2>
           </div>
-          <div class="intro-grid">
-            <p>
-              My background is in applied machine learning, computer vision, deep learning, robotics, and geospatial AI. I care about turning research ideas into systems that are usable in real workflows.
-            </p>
-            <p>
-              At Esri, I contributed to the <a href="https://developers.arcgis.com/python/api-reference/arcgis.learn.html" target="_blank" rel="noreferrer">learn module</a> of ArcGIS API for Python, helping GIS users prepare data, train models, and deploy deep learning workflows.
-            </p>
-          </div>
+
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th scope="row">Focus</th>
+                <td>Applied machine learning, computer vision, deep learning, robotics, geospatial AI, and healthcare.</td>
+              </tr>
+              <tr>
+                <th scope="row">Work style</th>
+                <td>Turning research ideas into systems that can be used in practical workflows.</td>
+              </tr>
+              <tr>
+                <th scope="row">ArcGIS</th>
+                <td>
+                  Contributed to the
+                  <a href="https://developers.arcgis.com/python/api-reference/arcgis.learn.html" target="_blank" rel="noreferrer">learn module</a>
+                  of ArcGIS API for Python, helping GIS users prepare data, train models, and deploy deep learning workflows.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Contact</th>
+                <td>
+                  <a href="mailto:divyanshj.16@gmail.com">divyanshj.16@gmail.com</a>
+                  <span class="link-row">
+                    <a href="https://github.com/divyanshj16" target="_blank" rel="noreferrer">GitHub</a>
+                    <a href="https://twitter.com/DIVYANSHJHA" target="_blank" rel="noreferrer">Twitter</a>
+                    <a href="https://www.linkedin.com/in/divyanshjha/" target="_blank" rel="noreferrer">LinkedIn</a>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section class="section" id="work" aria-labelledby="work-title">
           <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2 id="work-title">Recent work</h2>
+            <p class="section-label">02</p>
+            <h2 id="work-title">Work</h2>
           </div>
 
-          <div class="timeline">
-            <article class="timeline-item">
-              <span class="timeline-date">Aug 2024 - Present</span>
-              <div>
-                <h3>Research Engineer</h3>
-                <p>NYU Langone Health</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <span class="timeline-date">Dec 2021 - Jul 2024</span>
-              <div>
-                <h3>Machine Learning Engineer</h3>
-                <p>Woven by Toyota</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <span class="timeline-date">Jan 2021 - Oct 2021</span>
-              <div>
-                <h3>Visiting Researcher</h3>
-                <p>The University of Texas at Austin, with Dr. Yuke Zhu</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <span class="timeline-date">Feb 2020 - Aug 2021</span>
-              <div>
-                <h3>Research Intern</h3>
-                <p>King Abdullah University of Science and Technology, with Dr. Mohamed Elhoseiny</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <span class="timeline-date">May 2019 - Nov 2021</span>
-              <div>
-                <h3>Data Scientist II</h3>
-                <p>Esri R&D Center</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <span class="timeline-date">May 2018 - May 2019</span>
-              <div>
-                <h3>Machine Learning Intern</h3>
-                <p>Esri R&D Center</p>
-              </div>
-            </article>
-          </div>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th scope="col">Period</th>
+                <th scope="col">Role</th>
+                <th scope="col">Organization</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aug 2024 - Present</td>
+                <td>Research Engineer</td>
+                <td>NYU Langone Health</td>
+              </tr>
+              <tr>
+                <td>Dec 2021 - Jul 2024</td>
+                <td>Machine Learning Engineer</td>
+                <td>Woven by Toyota</td>
+              </tr>
+              <tr>
+                <td>Jan 2021 - Oct 2021</td>
+                <td>Visiting Researcher</td>
+                <td>The University of Texas at Austin, with Dr. Yuke Zhu</td>
+              </tr>
+              <tr>
+                <td>Feb 2020 - Aug 2021</td>
+                <td>Research Intern</td>
+                <td>King Abdullah University of Science and Technology, with Dr. Mohamed Elhoseiny</td>
+              </tr>
+              <tr>
+                <td>May 2019 - Nov 2021</td>
+                <td>Data Scientist II</td>
+                <td>Esri R&amp;D Center</td>
+              </tr>
+              <tr>
+                <td>May 2018 - May 2019</td>
+                <td>Machine Learning Intern</td>
+                <td>Esri R&amp;D Center</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section class="section" id="education" aria-labelledby="education-title">
           <div class="section-heading">
-            <p class="eyebrow">Education</p>
-            <h2 id="education-title">Academic background</h2>
+            <p class="section-label">03</p>
+            <h2 id="education-title">Education</h2>
           </div>
 
-          <div class="education-grid">
-            <article class="education-card">
-              <span class="education-meta">2024 - 2027</span>
-              <h3>M.S. Computer Science</h3>
-              <p>Georgia Institute of Technology</p>
-            </article>
-            <article class="education-card">
-              <span class="education-meta">2015 - 2019</span>
-              <h3>B.Tech Electronics and Communication Engineering</h3>
-              <p>Maharaja Agrasen Institute of Technology, Guru Gobind Singh Indraprastha University</p>
-            </article>
-          </div>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th scope="col">Years</th>
+                <th scope="col">Program</th>
+                <th scope="col">Institution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024 - 2027</td>
+                <td>M.S. Computer Science</td>
+                <td>Georgia Institute of Technology</td>
+              </tr>
+              <tr>
+                <td>2015 - 2019</td>
+                <td>B.Tech Electronics and Communication Engineering</td>
+                <td>Maharaja Agrasen Institute of Technology, Guru Gobind Singh Indraprastha University</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section class="section" id="writing" aria-labelledby="writing-title">
           <div class="section-heading">
-            <p class="eyebrow">Writing</p>
-            <h2 id="writing-title">Selected posts</h2>
+            <p class="section-label">04</p>
+            <h2 id="writing-title">Writing</h2>
           </div>
 
-          <div class="article-grid">
-            <a class="article-card" href="https://towardsdatascience.com/implementing-spade-using-fastai-6ad86b94030a" target="_blank" rel="noreferrer">
-              <span>Generative modeling</span>
-              <h3>Implementing SPADE using fastai</h3>
-              <p>Semantic image synthesis with spatially-adaptive normalization and fastai.</p>
-            </a>
-            <a class="article-card" href="https://medium.com/geoai/swimming-pool-detection-and-classification-using-deep-learning-aaf4a3a5e652" target="_blank" rel="noreferrer">
-              <span>GeoAI</span>
-              <h3>Swimming pool detection and classification using deep learning</h3>
-              <p>Object detection and classification workflows for geospatial imagery.</p>
-            </a>
-            <a class="article-card" href="https://towardsdatascience.com/not-just-another-gan-paper-sagan-96e649f01a6b" target="_blank" rel="noreferrer">
-              <span>Computer vision</span>
-              <h3>Not just another GAN paper - SAGAN</h3>
-              <p>A practical walkthrough of self-attention in generative adversarial networks.</p>
-            </a>
-            <a class="article-card" href="https://medium.com/@divyanshj.16/tackling-adversarial-examples-introspective-cnn-b28c67176575" target="_blank" rel="noreferrer">
-              <span>Robustness</span>
-              <h3>Tackling Adversarial Examples : Introspective CNN</h3>
-              <p>Notes on model behavior, adversarial examples, and robust image classification.</p>
-            </a>
-          </div>
+          <table class="info-table writing-table">
+            <thead>
+              <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Post</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Generative modeling</td>
+                <td><a href="https://towardsdatascience.com/implementing-spade-using-fastai-6ad86b94030a" target="_blank" rel="noreferrer">Implementing SPADE using fastai</a></td>
+                <td>Semantic image synthesis with spatially-adaptive normalization and fastai.</td>
+              </tr>
+              <tr>
+                <td>GeoAI</td>
+                <td><a href="https://medium.com/geoai/swimming-pool-detection-and-classification-using-deep-learning-aaf4a3a5e652" target="_blank" rel="noreferrer">Swimming pool detection and classification using deep learning</a></td>
+                <td>Object detection and classification workflows for geospatial imagery.</td>
+              </tr>
+              <tr>
+                <td>Computer vision</td>
+                <td><a href="https://towardsdatascience.com/not-just-another-gan-paper-sagan-96e649f01a6b" target="_blank" rel="noreferrer">Not just another GAN paper - SAGAN</a></td>
+                <td>A practical walkthrough of self-attention in generative adversarial networks.</td>
+              </tr>
+              <tr>
+                <td>Robustness</td>
+                <td><a href="https://medium.com/@divyanshj.16/tackling-adversarial-examples-introspective-cnn-b28c67176575" target="_blank" rel="noreferrer">Tackling Adversarial Examples : Introspective CNN</a></td>
+                <td>Notes on model behavior, adversarial examples, and robust image classification.</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p>Reach me at <a href="mailto:divyanshj.16@gmail.com">divyanshj.16@gmail.com</a></p>
-        <p>
-          <a href="https://github.com/divyanshj16" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://twitter.com/DIVYANSHJHA" target="_blank" rel="noreferrer">Twitter</a>
-          <a href="https://www.linkedin.com/in/divyanshjha/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </p>
+        <a href="#top">Top</a>
+        <a href="mailto:divyanshj.16@gmail.com">divyanshj.16@gmail.com</a>
+        <a href="assets/divyansh-resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </footer>
     </div>
   </body>
